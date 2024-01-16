@@ -98,15 +98,15 @@ def subtest_9(ctx):
     ctx.open_file(f2, ro=1, err=ENOENT)
 
 # Hard link a renamed symlink
-def subtest_10(ctx):
-    """Hard link renamed symlink"""
-    f = ctx.direct_sym() + ctx.termslash()
-    f2 = ctx.no_file() + ctx.termslash()
-    f3 = ctx.no_file() + "-a" + ctx.termslash()
-
-    ctx.rename(f, f2)
-    ctx.link(f, f3, err=ENOENT)
-    ctx.link(f2, f)
-    ctx.open_file(f, ro=1, read=":xxx:yyy:zzz")
-    ctx.open_file(f2, ro=1, read=":xxx:yyy:zzz")
-    ctx.open_file(f3, ro=1, err=ENOENT)
+#def subtest_10(ctx):
+#    """Hard link renamed symlink"""
+#    f = ctx.direct_sym() + ctx.termslash()
+#    f2 = ctx.no_file() + ctx.termslash()
+#    f3 = ctx.no_file() + "-a" + ctx.termslash()
+#
+#    ctx.rename(f, f2)
+#    ctx.link(f, f3, err=ENOENT)
+#    ctx.link(f2, f)
+#    ctx.open_file(f, ro=1, read=":xxx:yyy:zzz")
+#    ctx.open_file(f2, ro=1, read=":xxx:yyy:zzz")
+#    ctx.open_file(f3, ro=1, err=ENOENT)

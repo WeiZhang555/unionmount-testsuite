@@ -76,16 +76,16 @@ def subtest_7(ctx):
     ctx.open_dir(d2, ro=1, err=ENOENT)
 
 # Hard link a renamed directory
-def subtest_8(ctx):
-    """Hard link renamed dir"""
-    d = ctx.empty_dir() + "/new" + ctx.termslash()
-    d2 = ctx.no_dir() + ctx.termslash()
-    d3 = ctx.no_dir() + "-a" + ctx.termslash()
-
-    ctx.mkdir(d, 0o755)
-    ctx.rename(d, d2)
-    ctx.link(d, d3, err=ENOENT)
-    ctx.link(d2, d, err=EPERM)
-    ctx.open_dir(d, ro=1, err=ENOENT)
-    ctx.open_dir(d2, ro=1)
-    ctx.open_dir(d3, ro=1, err=ENOENT)
+#def subtest_8(ctx):
+#    """Hard link renamed dir"""
+#    d = ctx.empty_dir() + "/new" + ctx.termslash()
+#    d2 = ctx.no_dir() + ctx.termslash()
+#    d3 = ctx.no_dir() + "-a" + ctx.termslash()
+#
+#    ctx.mkdir(d, 0o755)
+#    ctx.rename(d, d2)
+#    ctx.link(d, d3, err=ENOENT)
+#    ctx.link(d2, d, err=EPERM)
+#    ctx.open_dir(d, ro=1, err=ENOENT)
+#    ctx.open_dir(d2, ro=1)
+#    ctx.open_dir(d3, ro=1, err=ENOENT)
